@@ -1,0 +1,50 @@
+.main {
+  background-color: rgb(31, 31, 32);
+  height: 700px;
+  width: 70%;
+  margin:  auto;
+  padding: 5px;
+  border-radius: 7px;
+  @media only screen and (max-width: 1115px) {
+    width: 100%;
+    
+  }
+ 
+}
+.btn-main {
+  margin-left: 10px;
+  background-color: aqua;
+  height: 55px;
+  width: 100px;
+}
+.explanation {
+  color: wheat;
+  transform: translateY(-200px);
+  background-color: rgb(41, 37, 37);
+  opacity: 0.8;
+  transition: 0.7s;
+  @media only screen and (max-width: 1115px) {
+    margin-top: 5px;
+    transform: translateY(-0);
+  }
+
+}
+.explanation:hover {
+  opacity: 0;
+}
+.image-api {
+  border-radius: 7px;
+  width: 100%;
+  height: 100%;
+}
+.languaje-toggle {
+  background-color: rgb(71, 73, 197);
+  border-radius: 7px;
+  padding: 5px;
+  transform: translateY(100px);
+  opacity: 0.6;
+  transition: .5;
+}
+.languaje-toggle:hover{
+  opacity: 1;
+}

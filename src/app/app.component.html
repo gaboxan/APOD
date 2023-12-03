@@ -1,0 +1,24 @@
+<div class="d-flex justify-content-center">
+  <mat-slide-toggle
+    (change)="Translate()"
+    [(ngModel)]="isChecked"
+    class="languaje-toggle"
+    >Español</mat-slide-toggle
+  >
+</div>
+
+<div class="container main">
+  <!-- <img class="image-api" [src]="apodData.url" alt="img-api" /> -->
+  <iframe *ngIf="apodData.media_type == 'video'"
+    width="100%"
+    height="100%"
+    src="https://www.youtube.com/embed/afHfMMC-MJE?si=of3TBp2XFoMlfeFL"
+    title="YouTube video player"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen
+  ></iframe>
+  <h4 class="explanation">{{ explanation }}</h4>
+</div>
+
+<router-outlet></router-outlet>
