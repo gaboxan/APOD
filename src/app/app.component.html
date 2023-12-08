@@ -8,7 +8,7 @@
 </div>
 
 <div class="container main">
-  <!-- <img class="image-api" [src]="apodData.url" alt="img-api" /> -->
+  <img *ngIf="apodData.media_type == 'image'" class="image-api" [src]="apodData.url" alt="img-api" />
   <iframe *ngIf="apodData.media_type == 'video'"
     width="100%"
     height="100%"
