@@ -9,6 +9,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { FormsModule } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 
+
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -31,6 +32,7 @@ export class AppComponent {
   explanationEn = '';
   explanation = '';
   translatedText: string = '';
+  apiUrl = 'https://translation.googleapis.com/language/translate/v2'
 
   constructor(
     private apodService: ApodService,
@@ -49,7 +51,7 @@ export class AppComponent {
     if (this.isChecked) {
       this.http
         .post(
-          'https://translation.googleapis.com/language/translate/v2?key=AIzaSyCYYIRSZeQFmvSND20flq4o1idheDdw3A4',
+          'https://translation.googleapis.com/language/translate/v2?key=AIzaSyAEqtA0cNydt2i76iKvUcBz0lprF7NbfrU',
           {
             q: [this.explanationEn],
             target: 'es',
@@ -81,4 +83,6 @@ export class AppComponent {
       this.explanation = this.explanationEn;
     }
   }
+ 
 }
+
